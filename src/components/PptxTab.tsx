@@ -77,8 +77,7 @@ Do not return any conversational text. Generate exactly ${slideCount} slides cov
     try {
       await executeStream(
         {
-          model: 'mistral-large', // Ideal model for high-fidelity structures and JSON mapping
-          messages: [
+model: 'laguna-s-2.1',          messages: [
             { role: 'system', content: systemPromptText },
             { role: 'user', content: `الموضوع الأساسي المراد تصميمه وبنائه بـ ${slideCount} شرائح هو: ${promptText}` }
           ],
