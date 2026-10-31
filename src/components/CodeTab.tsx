@@ -95,8 +95,7 @@ export const CodeTab: React.FC<CodeTabProps> = ({ onErrorToast, onRateLimit }) =
 
     await executeStream(
       {
-        model: 'mimo-v2.5-pro-free', // Ideal model for code manipulation and technical logical transformations
-        messages: payloadMessages
+model: 'laguna-s-2.1',        messages: payloadMessages
       },
       (chunk) => {
         accumulatedText += chunk;
