@@ -125,8 +125,7 @@ model: 'laguna-s-2.1',          messages: [
 
     try {
       const pptx = new pptxLib();
-      pptx.layout = 'LAYOUT_16x9';
-
+pptx.layout = 'LAYOUT_WIDE';
       generatedSlides.forEach((slideData, idx) => {
         const slide = pptx.addSlide();
         
