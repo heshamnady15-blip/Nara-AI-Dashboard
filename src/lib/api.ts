@@ -12,8 +12,8 @@ export const AVAILABLE_MODELS: ModelOption[] = [
   {
    id: 'laguna-s-2.1',
 name: 'laguna-s-2.1',
-    arabicName: 'ميسترال لارج - النصوص المعقدة (32K)',
-    description: 'نموذج أوروبي متطور يتميز بدقة البناء اللغوي والقدرات المنطقية المتينة لشتى الأغراض العامة.',
+  arabicName: 'لاجونا إس 2.1',
+   description: 'نموذج Laguna S 2.1.',
     badge: 'رائد',
     maxTokensText: '32K'
   },
