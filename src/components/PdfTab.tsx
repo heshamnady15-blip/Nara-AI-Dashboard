@@ -186,8 +186,7 @@ export const PdfTab: React.FC<PdfTabProps> = ({ onErrorToast, onRateLimit }) => 
     try {
       await executeStream(
         {
-          model: 'mimo-v2.5-pro-free', // Leverage the massive 200k Token window
-          messages: [
+model: 'laguna-s-2.1',          messages: [
             { role: 'system', content: 'أنت مستشار قراءة عميقة متمرس في تحليل المستندات وتحرير مقتطفات البيانات الفائقة.' },
             { role: 'user', content: targetPrompt }
           ]
@@ -205,7 +204,7 @@ export const PdfTab: React.FC<PdfTabProps> = ({ onErrorToast, onRateLimit }) => 
             role: 'assistant',
             content: fullText,
             timestamp: new Date(),
-            modelUsed: 'mimo-v2.5-pro-free'
+            modelUsed: 'laguna-s-2.1'
           };
           setChatHistory([...newHistory, assistantMsg]);
           setLiveAnswer('');
@@ -220,7 +219,7 @@ export const PdfTab: React.FC<PdfTabProps> = ({ onErrorToast, onRateLimit }) => 
             role: 'assistant',
             content: `⚠️ **حدث خطأ أثناء معالجة المستند والاستعلام من الخادم.**\n\n*تفاصيل الخطأ:* ${errMsg}`,
             timestamp: new Date(),
-            modelUsed: 'mimo-v2.5-pro-free'
+            modelUsed: 'laguna-s-2.1'
           };
           setChatHistory([...newHistory, errorMsg]);
           setTimeout(() => chatBottomRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
@@ -239,7 +238,7 @@ export const PdfTab: React.FC<PdfTabProps> = ({ onErrorToast, onRateLimit }) => 
         role: 'assistant',
         content: `⚠️ **حدث خطأ غير متوقع أثناء معالجة المستند والاستعلام من الخادم.**\n\n*تفاصيل الخطأ:* ${error.message || error}`,
         timestamp: new Date(),
-        modelUsed: 'mimo-v2.5-pro-free'
+        modelUsed: 'laguna-s-2.1'
       };
       setChatHistory([...newHistory, errorMsg]);
       setTimeout(() => chatBottomRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
@@ -301,8 +300,7 @@ export const PdfTab: React.FC<PdfTabProps> = ({ onErrorToast, onRateLimit }) => 
     try {
       await executeStream(
         {
-          model: 'mimo-v2.5-pro-free',
-          messages: formattedMessages
+model: 'laguna-s-2.1',          messages: formattedMessages
         },
         (chunk) => {
           accumulatedText += chunk;
@@ -317,7 +315,7 @@ export const PdfTab: React.FC<PdfTabProps> = ({ onErrorToast, onRateLimit }) => 
             role: 'assistant',
             content: fullText,
             timestamp: new Date(),
-            modelUsed: 'mimo-v2.5-pro-free'
+            modelUsed: 'laguna-s-2.1'
           };
           setChatHistory([...updatedMsgs, assistantMsg]);
           setLiveAnswer('');
@@ -335,7 +333,7 @@ export const PdfTab: React.FC<PdfTabProps> = ({ onErrorToast, onRateLimit }) => 
             role: 'assistant',
             content: errorContent,
             timestamp: new Date(),
-            modelUsed: 'mimo-v2.5-pro-free'
+            modelUsed: 'laguna-s-2.1'
           };
           setChatHistory([...updatedMsgs, assistantErrorMsg]);
           setTimeout(() => chatBottomRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
@@ -356,7 +354,7 @@ export const PdfTab: React.FC<PdfTabProps> = ({ onErrorToast, onRateLimit }) => 
         role: 'assistant',
         content: errorContent,
         timestamp: new Date(),
-        modelUsed: 'mimo-v2.5-pro-free'
+        modelUsed: 'laguna-s-2.1'
       };
       setChatHistory([...updatedMsgs, assistantErrorMsg]);
       setTimeout(() => chatBottomRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
@@ -469,8 +467,7 @@ export const PdfTab: React.FC<PdfTabProps> = ({ onErrorToast, onRateLimit }) => 
               </div>
               <div className="max-w-md bg-gold/5 text-gold-hover border border-gold/15 px-4 py-3 rounded-2xl text-[11px] leading-relaxed flex items-center gap-2">
                 <FileText className="w-4 h-4 shrink-0 text-[#B58921]" />
-                <span>يتم التوجيه حصراً لمعالج <strong>mimo-v2.5-pro-free</strong> الذي يتفوق بنافذة سياق عملاقة تلتهم <strong>العديد من الكلمات</strong> للـ RAG الحقيقي والذكي.</span>
-              </div>
+<span>تُرسل النصوص المستخرجة من المستند إلى نموذج <strong>laguna-s-2.1</strong> للتحليل.</span>              </div>
             </>
           )}
         </div>
