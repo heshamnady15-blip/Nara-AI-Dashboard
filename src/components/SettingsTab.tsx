@@ -125,21 +125,19 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({ onKeyChange, rateLimit
         <div className="bg-[#FDFBF7] rounded-3xl p-6 border border-[#D4AF37]/25 shadow-sm space-y-4">
           <h3 className="text-lg font-bold text-navy flex items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-gold" />
-            أمانك وسريتك التامة مكفولة 100%
+       معلومات تخزين المفتاح والخصوصية
           </h3>
           <ul className="space-y-3 text-xs text-slate-500 leading-relaxed">
             <li className="flex items-start gap-2.5">
               <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></span>
-              <span>يتم تخزين مفتاح العبور مشفراً داخل <strong>localStorage</strong> المحصورة بمتصفحك الذاتي فقط.</span>
+<span>يُحفظ المفتاح في <strong>localStorage</strong> داخل المتصفح دون تشفير بواسطة التطبيق، ويمكن للنصوص البرمجية التي تعمل على الموقع الوصول إليه.</span>            </li>
+            <li className="flex items-start gap-2.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></span>
+             <span>تُرسل الطلبات عبر توجيه Vercel إلى بوابة NaraRouter؛ راجع سياسات الخدمات المستخدمة لمعرفة كيفية معالجة البيانات.</span>
             </li>
             <li className="flex items-start gap-2.5">
               <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></span>
-              <span>لا توجد أي قواعد بيانات وسيطة أو خوادم خلفية تستمع لمفاتيحك أو تسترق رسائلك.</span>
-            </li>
-            <li className="flex items-start gap-2.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></span>
-              <span>الاستعلامات والطلبات تبث مباشرة من متصفحك الشخصي إلى الواجهة البرمجية لبوابة NaraRouter مما يضمن توافق تام للعمل سحابياً.</span>
-            </li>
+<span>قد تتمكن الخدمات التي تعالج الطلبات من الاطلاع على البيانات المرسلة إليها.</span>            </li>
           </ul>
         </div>
 
