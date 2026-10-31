@@ -547,8 +547,7 @@ model: 'laguna-s-2.1',          messages: formattedMessages
             <div className="px-5 py-4 border-b border-[#D4AF37]/20 bg-[#F5EBE0]/30 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span className="text-xs font-bold text-navy">قناة الدردشة الاستقصائية المغلقة (Qwen 3.7 Max 1M)</span>
-              </div>
+<span className="text-xs font-bold text-navy">قناة الدردشة الاستقصائية (laguna-s-2.1)</span>              </div>
               <span className="text-[10px] text-slate-500">يحتفظ بكامل سياق الأوراق تلقائياً</span>
             </div>
 
@@ -589,8 +588,7 @@ model: 'laguna-s-2.1',          messages: formattedMessages
                     </div>
                     {/* Copy and helper */}
                     <div className={`flex items-center gap-2 text-[9px] text-slate-400 ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                      <span>بواسطة: {m.modelUsed || 'Qwen 3.7 Max'}</span>
-                      <span>•</span>
+<span>بواسطة: {m.modelUsed || 'نموذج غير محدد'}</span>                      <span>•</span>
                       <button
                         onClick={() => handleCopyText(m.content, m.id)}
                         className="hover:text-gold transition-colors flex items-center gap-1 cursor-pointer"
